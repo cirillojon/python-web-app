@@ -1,5 +1,21 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} 
 
 {% block content %}
-<h1>This is the Sign Up Page</h1>
+<form method="POST">
+    <h3 align="center">
+        Sign Up
+    </h3>
+    <div class="form-group">
+        <label for="email">
+            Email Address
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                placeholder="Enter email"
+            />
+        </label>
+    </div>
+</form>
 {% endblock %}
