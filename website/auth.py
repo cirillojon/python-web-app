@@ -24,7 +24,7 @@ def login():
             flash('Email does not exist.', categroy='error')
 
 
-    return render_template("login.html", boolean=True)
+    return render_template("login.html", user=current_user)
 
 @auth.route('/logout')
 @login_required
@@ -62,4 +62,4 @@ def sign_up():
             except:
                 flash('Issue with Sign Up', category='error')
 
-    return render_template("sign_up.html")
+    return render_template("sign_up.html", user=current_user)
